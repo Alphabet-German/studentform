@@ -17,9 +17,9 @@ with st.form('entryForm', clear_on_submit=True):
     col1.text_input('', placeholder='Enter Name', label_visibility='collapsed')
 
 
-"---"
+    "---"
 
-submitted = st.form_submit_button('Save Form')
+    submitted = st.form_submit_button('Save Form')
 
-if submitted:
-    st.success('Data Saved')
+    if submitted:
+        st.success('Data Saved')
