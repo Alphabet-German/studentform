@@ -1,11 +1,8 @@
+import streamlit as st
 from deta import Deta
-import os
-from dotenv import load_dotenv
 
-load_dotenv('.env')
-DETA_KEY = os.getenv('DETA_KEY')
-
-deta = Deta(DETA_KEY)
+deta = Deta(st.secrets['data_key'])
+# deta = Deta(DETA_KEY)
 
 db = deta.Base('userformdb')
 
